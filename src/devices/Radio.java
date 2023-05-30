@@ -7,29 +7,30 @@ public class Radio implements Device {
 	
 	@Override
 	public boolean isEnabled() {
-		return on;
+		return on; // se está ligado, retorna ligado
 	}
 	
 	@Override
 	public void enable() {
-		on = true;
+		on = true; // liga = on = true
 	}
 
 	@Override
 	public void disable() {
-		on = false;
+		on = false; // desliga = on = false
 	}
 	
 	@Override
 	public int getVolume() {
-		return volume;
+		return volume; // pega o volume
 	}
 	
 	@Override
 	public void setVolume(int volume) {
+		// se volume maior que 100, volume fica configurado para só atingir 100 no máximo
 		if (volume > 100) {
 			this.volume = 100;
-		} else if (volume < 0) {
+		} else if (volume < 0) { // se volume menor que 0, configurado para só atingir 0 no mínimo
 			this.volume = 0;
 		} else {
 			this.volume = volume;
@@ -38,16 +39,16 @@ public class Radio implements Device {
 	
 	@Override
 	public int getChannel() {
-		return channel;
+		return channel; // pega o canal
 	}
 	
 	@Override
 	public void setChannel(int channel) {
-		this.channel = channel;
+		this.channel = channel; // configura o canal
 	}
 
 	@Override
-	public void printStatus() {
+	public void printStatus() { // status do rádio, mostrando que está ligado ou desligado, volume e canais atuais
 		System.out.println("------------------");
 		System.out.println("| I'm radio.");
 		System.out.println("| I'm "+ (on ? "enabled" : "disabled)"));

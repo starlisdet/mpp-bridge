@@ -1,11 +1,11 @@
 package remotes;
 
-public interface Remote {
+public interface Remote { // declaração de métodos de interface
 	
-	void power();
-	void volumeDown();
-	void volumeUp();
-	void channelDown();
-	void channelUp();
+	void power(); // controle remoto liga
+	void volumeDown(); // controle remoto diminui volume
+	void volumeUp(); // controle remoto aumenta volume
+	void channelDown(); // controle remoto muda de canal (-1)
+	void channelUp(); // controle remoto muda de canal (+1)
 
 }
